@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Search Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Blog Search</h1>
+    </header>
+    <main>
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="search-box" 
+                placeholder="Search for posts..." 
+                oninput="filterResults()">
+            <select id="filter" onchange="filterResults()">
+                <option value="all">All</option>
+                <option value="tech">Tech</option>
+                <option value="lifestyle">Lifestyle</option>
+                <option value="business">Business</option>
+            </select>
+        </div>
+        <div id="results" class="results-container"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
